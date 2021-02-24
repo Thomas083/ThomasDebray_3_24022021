@@ -1,7 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-@keyframes itemAppear {
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
   0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(0.5rem);
+  }
+  66% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes itemAppear {
     transform: scale(0);
+  0% {
   }
   100% {
     transform: scale(1);
@@ -70,6 +90,44 @@ body, html {
 .footer__icon {
   width: 1.2rem;
   margin-right: 0.5rem;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 1500ms;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__item {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  animation: jump 1000ms;
+  animation-iteration-count: 1;
+}
+.loader__itemContainer {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+.loader__item--1 {
+  background-color: #9356dc;
+}
+.loader__item--2 {
+  background-color: #ff79da;
+  animation-delay: 250ms;
+}
+.loader__item--3 {
+  background-color: #99e2d0;
+  animation-delay: 500ms;
 }
 
 .local {

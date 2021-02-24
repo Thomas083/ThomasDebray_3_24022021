@@ -6,4 +6,24 @@
         transform: scale(1);
     }
 }
+@keyframes loader {
+    100%{
+        opacity: 0;
+        z-index: -10;
+    }
+}
 
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    33% {
+        transform: translateY(0.5rem);
+    }
+    66% {
+        transform: translateY(-0.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
