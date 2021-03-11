@@ -5,7 +5,8 @@
   left: 0;
   top: 0;
   background-color: rgba($color: #ffffff, $alpha: 0.9);
-  animation: loader 1500ms;
+  animation: loader 100ms;
+  animation-delay: 1750ms;
   animation-fill-mode: both;
   z-index: 10000;
   display: flex;
